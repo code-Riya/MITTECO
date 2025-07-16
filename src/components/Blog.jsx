@@ -64,16 +64,33 @@ const Blog = () => {
 
   return (
     <>
-      {/* ✅ HERO SECTION (No changes here) */}
+      {/* ✅ HERO SECTION */}
       <div
         className="blog-hero"
         style={{ backgroundImage: `url(${blogHero})` }}
       >
         <div className="blog-hero-overlay">
-          <h1 className="blog-hero-heading">Grow Greener with Mitteco</h1>
+          {/* ✅ Typing Text */}
+          <h1 className="typing-heading">Grow Greener with Mitteco</h1>
+
           <p className="blog-hero-subheading">
             Terrace Farming • Composting • Sustainability
           </p>
+
+          {/* ✅ Marquee Scrolling Text */}
+          <div className="marquee">
+            <span>
+              🌱 Grow your own food • ♻️ Reduce waste • 🌿 Green your terrace •
+              🪱 Try composting today • 🌼 Sustainable Living • 🌞 Go Organic •
+              🌻 Make Earth Better • 💧 Save Water .
+            </span>
+            <span>
+              🌱 Grow your own food • ♻️ Reduce waste • 🌿 Green your terrace •
+              🪱 Try composting today • 🌼 Sustainable Living • 🌞 Go Organic •
+              🌻 Make Earth Better • 💧 Save Water .
+            </span>
+          </div>
+
           <div className="blog-hero-buttons">
             <a href="#latest-posts" className="btn primary">
               Explore Blog

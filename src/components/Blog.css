@@ -1,7 +1,7 @@
 /* === Blog Section === */
 .blog-section {
   padding: 60px 20px;
-  background-color: #f3eddd; /* very light parchment */
+  background-color: #f3eddd;
   font-family: "Segoe UI", sans-serif;
 }
 
@@ -9,7 +9,7 @@
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #2f3e2e; /* olivewood */
+  color: #2f3e2e;
   font-weight: 700;
 }
 
@@ -17,7 +17,7 @@
   text-align: center;
   font-size: 1rem;
   margin-bottom: 40px;
-  color: #5f6f61; /* sage */
+  color: #5f6f61;
 }
 
 /* === Hero Section === */
@@ -37,7 +37,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(62, 64, 49, 0.55); /* olivewood shadow */
+  background: rgba(62, 64, 49, 0.55);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,10 +48,29 @@
   box-sizing: border-box;
 }
 
-.blog-hero-heading {
-  font-size: 2.8rem;
+/* ✅ Typing Hero Heading */
+.typing-heading {
+  font-size: 3rem;
   font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: loopTyping 6s steps(28, end) infinite;
   margin-bottom: 10px;
+  border: none; /* ❌ no border cursor */
+}
+
+@keyframes loopTyping {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 28ch; /* Adjust this if text changes */
+  }
+  100% {
+    width: 0;
+  }
 }
 
 .blog-hero-subheading {
@@ -60,6 +79,37 @@
   color: #d7e6d4;
 }
 
+/* ✅ Marquee Scroll Text */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  margin-top: 15px;
+  padding: 10px 0;
+  /* background-color: rgba(0, 0, 0, 0.3); */
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-text 10s linear infinite;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* === Buttons in Hero === */
 .blog-hero-buttons .btn {
   display: inline-block;
   margin: 0 10px;
@@ -72,7 +122,7 @@
 }
 
 .btn.primary {
-  background-color: #6d8a61; /* olive */
+  background-color: #6d8a61;
   color: white;
 }
 
@@ -100,14 +150,14 @@
 }
 
 .blog-card-row {
-  background: #d5d4d1; /* parchment */
+  background: #d5d4d1;
   border-radius: 16px;
   overflow: hidden;
   width: 300px;
   flex-shrink: 0;
-  box-shadow: 0 6px 16px rgba(88, 110, 84, 0.15); /* sage shadow */
+  box-shadow: 0 6px 16px rgba(88, 110, 84, 0.15);
   transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
-  border: 1px solid #dcd3b2; /* sand border */
+  border: 1px solid #dcd3b2;
   display: flex;
   flex-direction: column;
 }
@@ -116,7 +166,7 @@
   transform: scale(1.1);
   z-index: 2;
   width: 350px;
-  border-color: #596b47; /* sage border */
+  border-color: #596b47;
 }
 
 .blog-card-row.inactive {
@@ -138,13 +188,13 @@
 .blog-card-row .blog-title {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #4b5e3a; /* sage/bark hybrid */
+  color: #4b5e3a;
   margin-bottom: 8px;
 }
 
 .blog-card-row .blog-excerpt {
   font-size: 0.95rem;
-  color: #5e5d54; /* bark-muted */
+  color: #5e5d54;
   margin-bottom: 12px;
   line-height: 1.5;
 }
@@ -152,7 +202,7 @@
 .blog-card-row .blog-btn {
   text-decoration: none;
   font-weight: 600;
-  color: #6d8a61; /* olive */
+  color: #6d8a61;
   border: 1px solid #6d8a61;
   padding: 6px 14px;
   border-radius: 20px;
@@ -165,12 +215,12 @@
   color: rgb(95, 90, 90);
 }
 
-/* Scrollbar Styling */
+/* === Scrollbar Styling === */
 .interactive-blog-row::-webkit-scrollbar {
   height: 6px;
 }
 .interactive-blog-row::-webkit-scrollbar-thumb {
-  background-color: #c9c2aa; /* sand */
+  background-color: #c9c2aa;
   border-radius: 4px;
 }
 
@@ -180,7 +230,7 @@
     font-size: 2rem;
   }
 
-  .blog-hero-heading {
+  .typing-heading {
     font-size: 2rem;
   }
 
